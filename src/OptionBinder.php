@@ -16,48 +16,56 @@
  * @since      File utilizzabile dalla Release 1.0
  *
  */
+
 namespace Herald\JogetJsonFormCreator;
 
-class OptionBinder implements \JsonSerializable {
-	// DICHIARO LE VARIABILI ED I METODI GET SET
-	private $className;
-	public function getclassName() {
-		return $this->className;
-	}
-	public function setclassName($value) {
-		$this->className = $value;
-	}
-	private $properties;
-	public function getproperties() {
-		return $this->properties;
-	}
-	public function setproperties($value) {
-		$this->properties = $value;
-	}
-	// DICHIARO I COSTRUTTORI
+class OptionBinder implements \JsonSerializable
+{
+    // DICHIARO LE VARIABILI ED I METODI GET SET
+    private $className;
+    public function getclassName()
+    {
+        return $this->className;
+    }
+    public function setclassName($value)
+    {
+        $this->className = $value;
+    }
+    private $properties;
+    public function getproperties()
+    {
+        return $this->properties;
+    }
+    public function setproperties($value)
+    {
+        $this->properties = $value;
+    }
+    // DICHIARO I COSTRUTTORI
 
-	/**
-	 * Costruttore
-	 *
-	 * @param string $classeJoget
-	 *        	Se passato imposta il Binder al valore, altrimenti crea un Binder vuoto
-	 *
-	 */
-	public function __construct($classeJoget = "") {
-		$this->className = $classeJoget;
-		$this->properties = new EmptyElement ();
-	}
+    /**
+     * Costruttore
+     *
+     * @param string $classeJoget
+     *        	Se passato imposta il Binder al valore, altrimenti crea un Binder vuoto
+     *
+     */
+    public function __construct($classeJoget = "")
+    {
+        $this->className = $classeJoget;
+        $this->properties = new EmptyElement();
+    }
 
-	/**
-	 *
-	 * {@inheritDoc}
-	 *
-	 * @see JsonSerializable::jsonSerialize()
-	 */
-	public function jsonSerialize() {
-		return [
-				'className' => $this->getclassName (),
-				'properties' => $this->getproperties ()
-		];
-	}
+    /**
+     *
+     * {@inheritDoc}
+     *
+     * @see JsonSerializable::jsonSerialize()
+     */
+    public function jsonSerialize()
+    {
+        return [
+                'className' => $this->getclassName(),
+                'properties' => $this->getproperties()
+        ];
+    }
 }

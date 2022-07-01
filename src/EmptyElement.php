@@ -15,9 +15,10 @@
  */
 
 namespace Herald\JogetJsonFormCreator;
+
 class EmptyElement
 {
-	public function __construct()
-	{
-	}
+    public function __construct()
+    {
+    }
 }
