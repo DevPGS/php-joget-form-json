@@ -1,6 +1,8 @@
 
-# Versione con add incrementali
-## Creo i contenitori e gli aggiungo gli elementi con funzioni di add
+# Esempi
+## Versione con add incrementali
+
+Creo i contenitori e gli aggiungo gli elementi con funzioni di add
 
 Istanzio una nuova form, sezione e colonna
 ```
@@ -49,8 +51,8 @@ $colonna->addElemento ( $scuola );
 $sezione->addColonna ( $colonna );
 $form->addSezione ( $sezione );
 ```
-# Versione con creazione in fase di construct
-## Creo in ordine ELEMENTI -> COLONNE -> SEZIONI -> FORM
+## Versione con creazione in fase di construct
+Creo in ordine ELEMENTI -> COLONNE -> SEZIONI -> FORM
 ```
 $opzioni = array();
 $elementi = array();
@@ -100,4 +102,3 @@ echo"<pre>";
 echo json_encode($form2);
 echo "</pre>";
 ```
-?>

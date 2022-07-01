@@ -108,6 +108,3 @@ miglioramento del progetto giorno dopo giorno!
   src="https://contributors-img.web.app/image?repo=sinetinformatica/php-joget-form-json"
   />
 </a>
-
-
-?>
