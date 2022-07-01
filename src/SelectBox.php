@@ -19,39 +19,13 @@
 
 namespace Herald\JogetJsonFormCreator;
 
-class SelectBox extends FormElement implements \JsonSerializable
+class SelectBox extends Radio implements \JsonSerializable
 {
     // DICHIARO LE VARIABILI ED I METODI GET SET
     public const CLASSNAME = "org.joget.apps.form.lib.SelectBox";
     public const MULTIPLESELECTION = "true";
     public const NOTMULTIPLESELECTION = "";
-    private $options;
-    public function getoptions()
-    {
-        return $this->options;
-    }
-    public function setoptions($value)
-    {
-        $this->options = $value;
-    }
-    private $optionBinder;
-    public function getoptionBinder()
-    {
-        return $this->optionBinder;
-    }
-    public function setoptionBinder($value)
-    {
-        $this->optionBinder = $value;
-    }
-    private $controlField;
-    public function getcontrolField()
-    {
-        return $this->controlField;
-    }
-    public function setcontrolField($value)
-    {
-        $this->controlField = $value;
-    }
+
     private $size;
     public function getsize()
     {
@@ -96,24 +70,6 @@ class SelectBox extends FormElement implements \JsonSerializable
         $this->controlField = "";
         $this->size = "";
         $this->multiple = self::NOTMULTIPLESELECTION;
-    }
-
-    /**
-     * Aggiungo un'opzione in coda a quelle gi� presenti
-     *
-     * @param Option $opzione
-     */
-    public function addOpzione($opzione)
-    {
-        $this->options [] = $opzione;
-    }
-
-    /**
-     * Conta il numero di opzioni contenute nell'elemento
-     */
-    public function contaOpzioni()
-    {
-        return count($this->options);
     }
 
     /**
