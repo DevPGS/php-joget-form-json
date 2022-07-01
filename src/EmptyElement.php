@@ -20,5 +20,6 @@ class EmptyElement
 {
     public function __construct()
     {
+		// Create an empty JSON element
     }
 }
