@@ -14,7 +14,10 @@
  * @since      File utilizzabile dalla Release 1.0
  *
  */
-class Form implements JsonSerializable
+
+namespace Herald\JogetJsonFormCreator;
+
+class Form implements \JsonSerializable
 {
     // DICHIARO LE VARIABILI ED I METODI GET SET
     public const CLASSNAME = "org.joget.apps.form.model.Form";
