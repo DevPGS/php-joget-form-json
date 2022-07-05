@@ -1,6 +1,6 @@
 {
     "name": "sinetinformatica/php-joget-form-json",
-    "description": "PHP Digital Green Certificate SDK",
+    "description": "PHP Joget JSON Form Creator",
     "license": "Apache-2.0",
     "require": {
         "php": ">=5.6"
